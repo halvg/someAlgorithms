@@ -4,6 +4,8 @@ var sorting = {};
 sorting.testList = [7, 5, 2, 3, 9, 3, 5, 1, 4, 8, 9, 5, 6, 3, 2, 7, 2];
 
 
+
+//##### Bubble Sort ################## 
 sorting.bubbleSort = function(list) {
 	for (var i = list.length-1; i > 0; i--) {
 		for (var j = 0; j < i; j++) {
@@ -21,6 +23,8 @@ sorting.bubbleSort = function(list) {
 }
 
 
+
+//##### Insertion Sort ################## 
 sorting.insertionSort = function(list) {
 	for (var i = 0; i < list.length-1; i++) {
 		var j = i;
@@ -38,11 +42,13 @@ sorting.insertionSort = function(list) {
 }
 
 
+
+//##### QuickSort ################## 
 sorting.quickSort = function(list) {
 	recursiveQSort(list, 0, list.length-1);
 	
 	function recursiveQSort(list, lowl, highl) {
-		if (lowl >= highl) { //si el fragmento de lista a ordenar es de un elemento o menos, ya est· ordenada
+		if (lowl >= highl) { //si el fragmento de lista a ordenar es de un elemento o menos, ya est√° ordenada
 			return;
 		}
 		var pivotePos = Math.trunc( (lowl+highl)/ 2 );
@@ -78,7 +84,7 @@ sorting.quickSort = function(list) {
 }
 
 
-
+//##### Merge Sort ################## 
 sorting.mergeSort = function(list) {
 	recursiveMSort(list, 0, list.length-1);
 	
